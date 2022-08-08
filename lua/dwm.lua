@@ -19,17 +19,17 @@ local no = s.NONE
 
 local COLORS = {
     dark = {
-        bg = '#282a36',
-        fg = '#eff0eb',
-        red = '#ff5c57',
-        yellow = '#f3f99d',
-        green = '#5af78e',
-        blue = '#57c7ff',
-        cyan = '#9aedfe',
-        purple = '#ff6ac1',
-        orange = '#ff9f43',
-        brown = '#b2643c',
-        pink = '#FF5370'
+        bg = '#333333',
+        fg = '#eeeeee',
+        red = '#c20000',
+        yellow = '#d4d400',
+        green = '#00a464',
+        blue = '#0073e4',
+        cyan = '#006495',
+        purple = '#a300ff',
+        orange = '#d67800',
+        brown = '#965300',
+        pink = '#d65b5b'
     },
     light = {
         bg = '#eff0eb',
@@ -72,56 +72,56 @@ end
 
 local M = {}
 function M.load()
-    vim.g.colors_name = 'snazzybuddy'
+    vim.g.colors_name = 'dwm'
     local current_mode = get_current_mode()
     -- Universal colors
     Color.new('fg1', get_color('fg'))
     Color.new('fg2', get_color('fg'))
-    Color.new('fg3', '#e2e4e5')
-    Color.new('disabled', '#464B5D')
-    Color.new('line_numbers', '#525975')
-    Color.new('selection', '#464B5D')
+    Color.new('fg3', '#eaeaea')
+    Color.new('disabled', '#d1d1d1')
+    Color.new('line_numbers', '#005577')
+    Color.new('selection', '#d1d1d1')
 
     Color.new('white', '#eff0eb')
-    Color.new('gray', '#5e6c70')
-    Color.new('black', '#000000')
+    Color.new('gray', '#252525')
+    Color.new('black', '#151515')
     Color.new('red', get_color('red'))
     Color.new('green', get_color('green'))
     Color.new('yellow', get_color('yellow'))
-    Color.new('yellowfaded', '#ebcb8b')
+    Color.new('yellowfaded', '#f2f200')
     Color.new('blue', get_color('blue'))
     Color.new('cyan', get_color('cyan'))
     Color.new('purple', get_color('purple'))
     Color.new('orange', get_color('orange'))
     Color.new('brown', get_color('brown'))
-    Color.new('comments', '#78787e')
+    Color.new('comments', '#0073b3')
     Color.new('error', get_color('red'))
     Color.new('pink', get_color('pink'))
     Color.new('incsearch', get_color('yellow'))
     Color.new('search', get_color('yellow'))
-    Color.new('Constant', get_color('orange'))
-    Color.new('String', get_color('green'))
-    Color.new('Character', get_color('red'))
-    Color.new('Boolean', get_color('orange'))
-    Color.new('Float', get_color('orange'))
+    Color.new('Constant', get_color('pink'))
+    Color.new('String', get_color('yellow'))
+    Color.new('Character', get_color('orange'))
+    Color.new('Boolean', get_color('pink'))
+    Color.new('Float', get_color('pink'))
     Color.new('Identifier', get_color('red'))
     Color.new('Function', get_color('blue'))
-    Color.new('Statement', get_color('red'))
-    Color.new('Conditional', get_color('purple'))
+    Color.new('Statement', get_color('yellow'))
+    Color.new('Conditional', get_color('yellow'))
     Color.new('Repeat', get_color('yellow'))
     Color.new('Label', get_color('yellow'))
     Color.new('Operator', get_color('yellow'))
     Color.new('Number', get_color('green'))
-    Color.new('Keyword', get_color('purple'))
+    Color.new('Keyword', get_color('yellow'))
     Color.new('Exception', get_color('red'))
-    Color.new('PreProc', get_color('yellow'))
-    Color.new('Include', get_color('blue'))
-    Color.new('Define', get_color('purple'))
-    Color.new('Macro', get_color('red'))
-    Color.new('PreCondit', get_color('purple'))
-    Color.new('Type', get_color('yellow'))
-    Color.new('StorageClass', get_color('yellow'))
-    Color.new('Structure', get_color('purple'))
+    Color.new('PreProc', get_color('pink'))
+    Color.new('Include', get_color('yellow'))
+    Color.new('Define', get_color('pink'))
+    Color.new('Macro', get_color('yellow'))
+    Color.new('PreCondit', get_color('yellow'))
+    Color.new('Type', get_color('green'))
+    Color.new('StorageClass', get_color('green'))
+    Color.new('Structure', get_color('yellow'))
     Color.new('Typedef', get_color('yellow'))
     Color.new('Special', get_color('blue'))
     Color.new('SpecialChar', get_color('yellow'))
@@ -130,7 +130,7 @@ function M.load()
     Color.new('SpecialComment', get_color('yellow'))
     Color.new('Debug', get_color('red'))
     Color.new('Underlined', get_color('blue'))
-    Color.new('Todo', get_color('yellow'))
+    Color.new('Todo', get_color('cyan'))
     -- Color.new('TSProperty', get_color('fg'))
     -- Style specific colors
     if current_mode == 'dark' then
@@ -139,11 +139,11 @@ function M.load()
         Color.new('fg1', get_color('fg'))
         Color.new('invisibles', '#65737E')
         Color.new('comments', '#78787e')
-        Color.new('guides', '#424242')
-        Color.new('line_numbers', '#606580')
+        Color.new('guides', '#444444')
+        Color.new('line_numbers', '#005577')
         -- Color.new('lsp_background', '#606580')
-        Color.new('lsp_background', '#54555e')
-        Color.new('line_highlight', '#171717')
+        Color.new('lsp_background', '#333333')
+        Color.new('line_highlight', '#252525')
         Color.new('accent', get_color('yellow'))
         Color.new('htmlBold', get_color('yellow'))
         Color.new('url', get_color('red'))
@@ -153,7 +153,7 @@ function M.load()
         Color.new('TSVariable', get_color('fg'))
         Color.new('TSField', get_color('fg'))
         Color.new('TSProperty', get_color('blue'))
-        Color.new('Boolean', get_color('purple'))
+        Color.new('Boolean', get_color('pink'))
         Color.new('TSParameter', get_color('fg'))
         Color.new('TSKeywordOperator', get_color('yellow'))
 
@@ -197,7 +197,7 @@ function M.load()
 
     end
     -- Choose italic comments
-    if vim.g.snazzybuddy_italics == 1 then
+    if vim.g.dwm_italics == 1 then
         Group.new('Comment', c.comments, c.none, i) -- italic comments
     else
         Group.new('Comment', c.comments, c.none, no) -- normal comments
@@ -973,8 +973,8 @@ function M.load()
 end
 
 function M.icon_load()
-    if vim.g.colors_name == 'snazzybuddy' and vim.g.snazzybuddy_icons then
-        require'snazzybuddy.icons'.setup(Group)
+    if vim.g.colors_name == 'dwm' and vim.g.dwm_icons then
+        require'dwm.icons'.setup(Group)
     end
 end
 
@@ -985,9 +985,9 @@ end
 -- end
 
 function M.reload()
-    package.loaded.snazzybuddy = nil
+    package.loaded.dwm = nil
     package.loaded.colorbuddy = nil
-    require('colorbuddy').colorscheme('snazzybuddy')
+    require('colorbuddy').colorscheme('dwm')
 end
 
 M.load()
