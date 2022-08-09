@@ -5,7 +5,7 @@
 local COLORS = {	
         bg = '#333333',
         fg = '#eeeeee',
-	fg2 = '#444444'
+	fg2 = '#444444',
 	black = '#151515',
 	gray = '#252525',
         red = '#c20000',
@@ -33,14 +33,15 @@ end
 
 
 local Color, colors, Group, groups, styles = require('colorbuddy').setup()
+local g = require('colorbuddy.group').groups
 local c = require('colorbuddy.color').colors
-local g = require('colorbuddy.groubs').groups
 local s = require('colorbuddy.style').styles
+
+vim.g.colors_name = 'dwm'
 
 Color.new('bg', get_color('bg'))
 Color.new('fg', get_color('fg'))
 Color.new('fg2', get_color('fg2'))
-Color.new('white', get_color('white'))
 Color.new('gray', get_color('gray'))
 Color.new('black', get_color('black'))
 Color.new('red', get_color('red'))
